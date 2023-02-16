@@ -9,8 +9,11 @@ choco install filen --ignore-checksums
 choco install obsidian --ignore-checksums
 #Games
 choco install steam --ignore-checksums
-winget install --id=EpicGames.EpicGamesLauncher -e 
+#winget install --id=EpicGames.EpicGamesLauncher -e 
+choco install epicgameslauncher --ignore-checksums
 choco install playnite --ignore-checksums
+choco install multimc --ignore-checksums
+choco install gbm --ignore-checksums
 #benchmark
 choco install furmark --ignore-checksums
 choco install superposition-benchmark --ignore-checksums
@@ -24,7 +27,7 @@ choco install crystaldiskinfo --ignore-checksums
 choco install hwinfo --ignore-checksums
 #Utilty
 choco install msiafterburner --ignore-checksums
-
+choco install qview --ignore-checksums
 choco install geekuninstaller --ignore-checksums
 choco install ddu --ignore-checksums
 choco install motrix --ignore-checksums
@@ -45,6 +48,7 @@ winget install --id=JackieLiu.NotepadsApp -e --accept-source-agreements --accept
 winget install --id=TechPowerUp.GPU-Z  -e --accept-source-agreements --accept-package-agreements
 winget install --id=AgileBits.1Password -e --accept-source-agreements --accept-package-agreements 
 winget install --id=SyncTrayzor.SyncTrayzor -e --accept-source-agreements --accept-package-agreements
+winget install --id=JackieLiu.NotepadsApp -e --accept-source-agreements --accept-package-agreements
 #Communction 
 winget install --id=Discord.Discord -e --accept-source-agreements --accept-package-agreements
 winget install --id=Element.Element  -e --accept-source-agreements --accept-package-agreements
