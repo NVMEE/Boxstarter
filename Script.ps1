@@ -10,23 +10,23 @@ choco install filen
 choco install obsidian
 #Games
 choco install steam
-choco install epicgames
+winget install --id=EpicGames.EpicGamesLauncher -e 
 choco install playnite
 #benchmark
 choco install furmark
 choco install superposition-benchmark
 choco install valley-benchmark
 choco install heaven-benchmark
-choco install aida64-extreme
+winget install --id=FinalWire.AIDA64.Extreme  -e
 choco install cinebench
-choco install 3dmark
+#3dmark doesn't work. (Outdated)
 choco install crystaldiskmark
 choco install crystaldiskinfo
 choco install hwinfo
 #Utilty
-choco install msiafterburner
+#msiafterburner doesn't work (Checksum)
 choco install geekuninstaller
-choco install display driver uninstaller
+choco install ddu
 choco install motrix
 choco install flameshot
 choco install libreoffice-fresh
@@ -50,23 +50,23 @@ winget install --id=Discord.Discord -e
 winget install --id=Element.Element  -e
 
 #Remover
-$AppList = @(
-    "*Microsoft.WindowsAlarm*"
-    "*Microsoft.YourPhone*"
-    "*Microsoft.WindowsCamera*"
-    "*Microsoft.WindowsFeedbackHub*"
-    "*Microsoft.GetHelp*"
-    "*Microsoft.WindowsMaps*"
-    "*Microsoft.BingNew*"
-    "*Microsoft.MicrosoftOfficeHub*"
-    "*Microsoft.BingWeather*"
-    "*Microsoft.WindowsSoundRecorder*"
-    "*Microsoft3DViewer*"
-    "*bingsports*"
-    "*Microsoft.Print3D*"
-)
-
-foreach ($App in $AppList) {
-    Get-AppxPackage -Name $App | Remove-AppxPackage -ErrorAction SilentlyContinue
-}
+#$AppList = @(
+#    "*Microsoft.WindowsAlarm*"
+#    "*Microsoft.YourPhone*"
+#    "*Microsoft.WindowsCamera*"
+#    "*Microsoft.WindowsFeedbackHub*"
+#    "*Microsoft.GetHelp*"
+#    "*Microsoft.WindowsMaps*"
+#    "*Microsoft.BingNew*"
+#    "*Microsoft.MicrosoftOfficeHub*"
+#    "*Microsoft.BingWeather*"
+#    "*Microsoft.WindowsSoundRecorder*"
+#    "*Microsoft3DViewer*"
+#    "*bingsports*"
+#    "*Microsoft.Print3D*"
+#)
+#
+#foreach ($App in $AppList) {
+#    Get-AppxPackage -Name $App | Remove-AppxPackage -ErrorAction SilentlyContinue
+#}
 Enable-UAC
