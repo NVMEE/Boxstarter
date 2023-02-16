@@ -1,45 +1,43 @@
 Disable-UAC
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-irm get.scoop.sh | iex
 choco feature enable -n allowGlobalConfirmation
-#Browser/s
-choco install Firefox
-#Privacy
-choco install tutanota
-choco install filen
-choco install obsidian
-#Games
-choco install steam
-winget install --id=EpicGames.EpicGamesLauncher -e 
-choco install playnite
-#benchmark
-choco install furmark
-choco install superposition-benchmark
-choco install valley-benchmark
-choco install heaven-benchmark
-winget install --id=FinalWire.AIDA64.Extreme -e --accept-source-agreements --accept-package-agreements
-choco install cinebench
-#choco 3dmark doesn't work. (Outdated)
-choco install crystaldiskmark
-choco install crystaldiskinfo
-choco install hwinfo
-#Utilty
-#choco msiafterburner doesn't work (Checksum)
 
-choco install geekuninstaller
-choco install ddu
-choco install motrix
-choco install flameshot
-choco install libreoffice-fresh
-choco install eartrumpet
-choco install obs-studio
-choco install mpv.install
-choco install lockhunter
-choco install cpu-z
-choco install okular
-choco install fluent-terminal
-choco install powertoys
+#Browser/s
+choco install Firefox --ignore-checksums
+#Privacy
+choco install tutanota --ignore-checksums
+choco install filen --ignore-checksums
+choco install obsidian --ignore-checksums
+#Games
+choco install steam --ignore-checksums
+winget install --id=EpicGames.EpicGamesLauncher -e 
+choco install playnite --ignore-checksums
+#benchmark
+choco install furmark --ignore-checksums
+choco install superposition-benchmark --ignore-checksums
+choco install valley-benchmark --ignore-checksums
+choco install heaven-benchmark --ignore-checksums
+choco install aida64-extreme --ignore-checksums
+#winget install --id=FinalWire.AIDA64.Extreme -e --accept-source-agreements --accept-package-agreements
+choco install cinebench --ignore-checksums
+choco install crystaldiskmark --ignore-checksums
+choco install crystaldiskinfo --ignore-checksums
+choco install hwinfo --ignore-checksums
+#Utilty
+choco install msiafterburner --ignore-checksums
+
+choco install geekuninstaller --ignore-checksums
+choco install ddu --ignore-checksums
+choco install motrix --ignore-checksums
+choco install flameshot --ignore-checksums
+choco install libreoffice-fresh --ignore-checksums
+choco install eartrumpet --ignore-checksums
+choco install obs-studio --ignore-checksums
+choco install mpv.install --ignore-checksums
+choco install lockhunter --ignore-checksums
+choco install cpu-z --ignore-checksums 
+choco install okular --ignore-checksums
+choco install fluent-terminal --ignore-checksums
+choco install powertoys --ignore-checksums
 #Winget
 winget install --id=HulubuluSoftware.AdvancedRenamer -e --accept-source-agreements --accept-package-agreements
 winget install --id=M2Team.NanaZip -e --accept-source-agreements --accept-package-agreements
