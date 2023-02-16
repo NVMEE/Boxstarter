@@ -1,6 +1,7 @@
-#BoxStarter
 Disable-UAC
-#Chocolatey
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+irm get.scoop.sh | iex
 choco feature enable -n allowGlobalConfirmation
 #Browser/s
 choco install Firefox
@@ -17,14 +18,15 @@ choco install furmark
 choco install superposition-benchmark
 choco install valley-benchmark
 choco install heaven-benchmark
-winget install --id=FinalWire.AIDA64.Extreme  -e
+winget install --id=FinalWire.AIDA64.Extreme -e --accept-source-agreements --accept-package-agreements
 choco install cinebench
-#3dmark doesn't work. (Outdated)
+#choco 3dmark doesn't work. (Outdated)
 choco install crystaldiskmark
 choco install crystaldiskinfo
 choco install hwinfo
 #Utilty
-#msiafterburner doesn't work (Checksum)
+#choco msiafterburner doesn't work (Checksum)
+
 choco install geekuninstaller
 choco install ddu
 choco install motrix
@@ -39,15 +41,15 @@ choco install okular
 choco install fluent-terminal
 choco install powertoys
 #Winget
-winget install --id=HulubuluSoftware.AdvancedRenamer -e 
-winget install --id=M2Team.NanaZip -e 
-winget install --id=JackieLiu.NotepadsApp -e 
-winget install --id=TechPowerUp.GPU-Z  -e
-winget install --id=AgileBits.1Password -e 
-winget install --id=SyncTrayzor.SyncTrayzor -e
+winget install --id=HulubuluSoftware.AdvancedRenamer -e --accept-source-agreements --accept-package-agreements
+winget install --id=M2Team.NanaZip -e --accept-source-agreements --accept-package-agreements
+winget install --id=JackieLiu.NotepadsApp -e --accept-source-agreements --accept-package-agreements
+winget install --id=TechPowerUp.GPU-Z  -e --accept-source-agreements --accept-package-agreements
+winget install --id=AgileBits.1Password -e --accept-source-agreements --accept-package-agreements 
+winget install --id=SyncTrayzor.SyncTrayzor -e --accept-source-agreements --accept-package-agreements
 #Communction 
-winget install --id=Discord.Discord -e 
-winget install --id=Element.Element  -e
+winget install --id=Discord.Discord -e --accept-source-agreements --accept-package-agreements
+winget install --id=Element.Element  -e --accept-source-agreements --accept-package-agreements
 
 #Remover
 #$AppList = @(
