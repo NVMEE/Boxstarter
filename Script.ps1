@@ -51,7 +51,7 @@ winget install --id=SyncTrayzor.SyncTrayzor -e --accept-source-agreements --acce
 winget install --id=JackieLiu.NotepadsApp -e --accept-source-agreements --accept-package-agreements
 #Communction 
 winget install --id=Discord.Discord -e --accept-source-agreements --accept-package-agreements
-winget install --id=Element.Element  -e --accept-source-agreements --accept-package-agreements
+winget install --id=SchildiChat.SchildiChat  -e --accept-source-agreements --accept-package-agreements
 
 #Remover
 #$AppList = @(
